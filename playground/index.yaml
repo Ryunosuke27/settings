@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: ---
+Metadata:
+
+Parameters:
+hello:
+  test: test
+  te2st: "test"
+
+Mappings:
+
+Conditions:
+
+Resources:
+  test: test
+
+Outputs:

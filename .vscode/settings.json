@@ -1,21 +1,104 @@
 {
+  /* ----------------------------------------------------- *
+   * 基本設定
+   * ----------------------------------------------------- */
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "breadcrumbs.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "afterDelay",
 
-  "[typescript]": {
+  /* ----------------------------------------------------- *
+   * TypeScript / React
+   * ----------------------------------------------------- */
+  "[typescript][typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     }
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    }
-  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  /* ----------------------------------------------------- *
+   * Prisma
+   * ----------------------------------------------------- */
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
+  },
+
+  /* ----------------------------------------------------- *
+   * Playwright
+   * ----------------------------------------------------- */
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+
+  /* ----------------------------------------------------- *
+   * Python
+   * ----------------------------------------------------- */
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "black-formatter.args": ["--line-length=120"],
+  "flake8.args": ["--max-line-length=120", "--ignore=E203,W503,W504"],
+
+  /* ----------------------------------------------------- *
+   * Terraform
+   * ----------------------------------------------------- */
+  "[terraform][terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.codeActionsOnSave": {
+      "source.formatAll.terraform": "explicit"
+    }
+  },
+
+  /* ----------------------------------------------------- *
+   * AWS CloudFormation
+   * ----------------------------------------------------- */
+  "yaml.customTags": [
+    "!And",
+    "!If",
+    "!Not",
+    "!Equals",
+    "!Or",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Join sequence"
+  ],
+
+  /* ----------------------------------------------------- *
+   * Docker
+   * ----------------------------------------------------- */
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+
+  /* ----------------------------------------------------- *
+   * Markdown
+   * ----------------------------------------------------- */
+  "markdown.preview.breaks": true,
+
+  /* ----------------------------------------------------- *
+   * JSON
+   * ----------------------------------------------------- */
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
